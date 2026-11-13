@@ -3,7 +3,10 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-df=pd.read_csv('/content/Advertising_F.csv')
+from pathlib import Path
+
+csv_path = Path(__file__).parent / "Advertising_F.csv"
+df = pd.read_csv(csv_path)
 st.title('Advertising Effectivness Riley')
 
 st.sidebar.header('Filters')
